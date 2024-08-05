@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .container{
+            font-size: 20px;
+            .text1{
+                text-align: center; /*가로축 정렬*/
+            }
+            .text2{
+                text-indent: -30px; /*첫 번째 줄에 대한 들여쓰기. (마이너스 값을
+                적용할 경우 내어쓰기가 됨)*/
+            }
+            .text3{
+                text-decoration: underline overline line-through; /*밑줄, 윗줄, 취소선*/
+            }
+            .text4{
+                img{
+                    vertical-align: middle; /*사진을 기준으로 한 세로축 위치 (top, middle, bottom)*/
+                }
+            }
+            .text5{
+                letter-spacing: -2px;/*글자 간의 간격*/
+                word-spacing: 10px; /*단어 간의 간격*/
+            }
+            .text6{
+                white-space: nowrap; /*줄 바꿈 속성 제어*/
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text1">문단 관련 속성(1)</div>
+        <hr />
+        <div class="text2">
+            문단 관련 속성(2) <br />
+            문단 관련 속성(2)
+        </div>
+        <hr />
+        <div class="text3">문단 관련 속성(3)</div>
+        <hr />
+        <div class="text4">
+            <img src="img/sample.png" width="50" alt="이미지" />
+            문단 관련 속성(4)
+        </div>
+        <hr />
+        <div class="text5">문단 관련 속성(5)</div>
+        <hr />
+        <div class="text6">
+            문단 관련 속성(6) 문단 관련 속성(6) 문단 관련 속성(6) 문단 관련 속성(6) 문단 관련 속성(6) 문단 관련 속성(6) 문단 관련 속성(6) 문단 관련 속성(6)
+        </div>
+    </div>
+</body>
+</html>
