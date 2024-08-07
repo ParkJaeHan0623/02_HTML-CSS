@@ -1,0 +1,6 @@
+li 태그 열때는 무조건 a태그 열기( 클릭못하면의미X)
+목록정의 리스트 - padding, margin 0 설정
+a - display: block; (목록 전체 클릭가능하게)
+
+
+03.HTML 만들기~231page
