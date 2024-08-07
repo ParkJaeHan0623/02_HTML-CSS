@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+         *{
+            margin: 0;
+            padding:0;
+        }
+        .navi{
+            background: url(img/list_right.png) repeat-y right top,
+            url(img/menu.png)no-repeat left top,
+            url(img/list_bg.png)repeat;
+        }
+        a{
+            display: block;
+            width: auto;
+            height: 45px;
+            text-indent: -1000000px;
+            transition: all 0.3s;
+            &:hover{
+                background-color: #ff0;
+            }
+            
+        }
+        .subtitle{
+            width: auto;
+            /*배경 이미지에 맞춘 높이값*/
+            height: 160px;
+            background: url(img/info_bg.png) repeat-x;
+
+            h2{
+                width: 288px;
+                height: 108px;
+                margin: auto;
+                background: url(img/center.jpg) no-repeat;
+                text-indent: -100000px; /*들여쓰기 -값은 화면 밖으로 나감*/ 
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="subtitle">
+        <h2>
+            차세대 웹 표준을 위한 진화의 시작! 지금 도전하십시오.
+            무한한 가능성이 당신을 기다립니다.
+        </h2>
+    </div>
+    
+    <nav class="navi">
+        <a href="#">웹표준/웹디자인</a>
+        <a href="#">소셜미디어마케팅</a>
+        <a href="#">IT/모바일</a>
+        <a href="#">0A</a>
+    </nav>
+    
+</body>
+</html>

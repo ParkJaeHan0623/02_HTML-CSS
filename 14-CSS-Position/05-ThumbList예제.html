@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul,
+      ol {
+        list-style-type: none;
+      }
+      .gallery {
+        li {
+          border-bottom: 1px dotted gray;
+          &:first-child {
+            border-top: 1px dotted gray;
+          }
+          &:hover {
+            background-color: rgba(179, 243, 75, 0.295);
+          }
+          a {
+            display: block;
+            width: auto;
+            padding: 5px;
+            color: #222;
+            text-decoration: none;
+
+            position: relative; /*텍스트를 감사는 블록의 부모 요소에게 position 부여  <a>태그 영역 안에서 position 속성을 사용해야 하는 요소가 있다면 필수 적용!!!!*/
+            /*이미지가 들어있는 <span> 및 이미지 크기 처리*/
+            .thumb {
+              width: 80px;
+              height: 80px;
+              display: block;
+
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            /*텍스트를 감싸는 블록 설정*/
+            .text {
+              display: block;
+              width: 100%;
+              position: absolute;
+              left: 0px;
+              top: 21px;
+              padding-left: 100px;
+              padding-right: 10px;
+              /*제목+내용 공통 설정*/
+              span {
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                /*제목 글자크기, 굵기, 줄간격*/
+                &.title {
+                  font-size: 17px;
+                  font-weight: bold;
+                  line-height: 150%;
+                }
+                /*내용 글자크기, 줄간격*/
+                &.desc {
+                  font-size: 14px;
+                  line-height: 150%;
+                }
+              }
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="gallery">
+      <li>
+        <a href="#">
+          <span class="thumb">
+            <img src="img/thumb-01.jpg" alt="이미지1" />
+          </span>
+          <span class="text">
+            <span class="title">바다 여행에서의 피부관리 노하우</span>
+            <span class="desc">자외선 걱정 없이 바다여행 즐기기 노하우</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="thumb">
+            <img src="img/thumb-01.jpg" alt="이미지1" />
+          </span>
+          <span class="text">
+            <span class="title">바다 여행에서의 피부관리 노하우</span>
+            <span class="desc">자외선 걱정 없이 바다여행 즐기기 노하우</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="thumb">
+            <img src="img/thumb-01.jpg" alt="이미지1" />
+          </span>
+          <span class="text">
+            <span class="title">바다 여행에서의 피부관리 노하우</span>
+            <span class="desc">자외선 걱정 없이 바다여행 즐기기 노하우</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="thumb">
+            <img src="img/thumb-01.jpg" alt="이미지1" />
+          </span>
+          <span class="text">
+            <span class="title">바다 여행에서의 피부관리 노하우</span>
+            <span class="desc">자외선 걱정 없이 바다여행 즐기기 노하우</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="thumb">
+            <img src="img/thumb-01.jpg" alt="이미지1" />
+          </span>
+          <span class="text">
+            <span class="title">바다 여행에서의 피부관리 노하우</span>
+            <span class="desc">자외선 걱정 없이 바다여행 즐기기 노하우</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>

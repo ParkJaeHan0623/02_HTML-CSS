@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .section{
+            height: 640px;
+            font-size: 30px;
+            color: white;
+            text-shadow: 0 1px 1px black;
+
+            &:nth-child(2n){
+                background-color: rgba(127, 255, 212, 0.39);
+            }
+            &:nth-child(odd){
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+            &:nth-child(1){
+                background-image: url(img/bg1.jpg);
+            }
+            &:nth-child(3){
+                background-image: url(img/bg2.jpg);
+            }
+            &:nth-child(5){
+                background-image: url(img/bg3.jpg);
+            }
+            &:nth-child(7){
+                background-image: url(img/bg4.jpg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="section">section</div>
+    <div class="section">section</div>
+    <div class="section">section</div>
+    <div class="section">section</div>
+    <div class="section">section</div>
+    <div class="section">section</div>
+    <div class="section">section</div>
+
+</body>
+</html>
