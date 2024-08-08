@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .icon_list{
+            li{
+                width: 25%;
+                height: 96px;
+                cursor: pointer;
+                display: inline-block;
+                margin :0 -4px; /*li 태그를 띄워쓰기하면 한칸이 4px 정도라 밀리게 되어서 한줄에 3개씩 들어가는걸 방지하기 위해 마진값을 -4px준다*/
+            }
+            a{
+                display: block;
+                width: 75px;
+                height: 81px;
+                margin: auto;
+                padding-top: 15px;
+
+                font: 12px '굴림' bold;
+                color: #222;
+                text-decoration: none; 
+            }
+            .icon{
+                display: block;
+                width: 56px;
+                height: 56px;
+                background: url(img/icon.png) no-repeat;
+                margin: auto;
+
+                &.icon1{background-position: 0 0;}
+                &.icon2{background-position: -58px 0;}
+                &.icon3{background-position: -115px 0;}
+                &.icon4{background-position: -172px 0;}
+                &.icon5{background-position: 0 -57px;}
+                &.icon6{background-position: -58px -57px;}
+                &.icon7{background-position: 0 0;}
+                &.icon8{background-position: 0 0;}
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul class="icon_list">
+        <li>
+            <a href="#">
+                <span class="icon icon1"></span>
+                <span class="txt">전화걸기</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon icon2"></span>
+                <span class="txt">트위터</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon icon3"></span>
+                <span class="txt">페이스북</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon icon4"></span>
+                <span class="txt">메일</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon icon5"></span>
+                <span class="txt">RSS</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon icon6"></span>
+                <span class="txt">음악</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon icon7"></span>
+                <span class="txt">검색</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="icon icon8"></span>
+                <span class="txt">홈</span>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

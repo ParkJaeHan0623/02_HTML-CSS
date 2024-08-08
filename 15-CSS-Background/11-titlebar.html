@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgba(136, 129, 233, 0.192);
+        }
+        .titlebar{
+            width: 100%;
+            height: 45px;
+            border-bottom: 1px solid #26035e;
+            background: linear-gradient(223deg, #2432FE 0, #C882F6 83%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100000;
+            .titlebar-text{
+                color: antiquewhite;
+                font: 20px;
+                text-shadow: 2px 6px 6px #000000;
+                text-align: center;
+                top: 10px;
+            }
+        }
+        .content{
+            padding-top: 46px;/*내용영역이 타이틀바에 가려지는 현상 방지*/
+
+        }
+        .navi{
+            background: url(img/list_right.png) repeat-y right top,
+            url(img/menu.png)no-repeat left top,
+            url(img/list_bg.png)repeat;
+        }
+        a{
+            display: block;
+            width: auto;
+            height: 45px;
+            text-indent: -1000000px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header class="titlebar">
+            <h1 class="titlebar-text">과목을 선택하세요</h1>
+        </header>
+    
+    <section class="content">
+        <nav class="navi">
+            <a href="#">웹표준/웹디자인</a>
+            <a href="#">소셜미디어마케팅</a>
+            <a href="#">IT/모바일</a>
+            <a href="#">0A</a>
+        </nav>
+    </section>
+    </div>
+</body>
+</html>
