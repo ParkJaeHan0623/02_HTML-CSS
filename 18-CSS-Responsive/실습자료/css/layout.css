@@ -1,0 +1,100 @@
+*{
+    font-family: 'Noto Sans KR';
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    .jumbotron{
+        padding: 80px;
+        text-align: center;
+        background: paleturquoise;
+        color: white;
+    }
+    h1{
+        font-size: 40px;
+    }
+}
+
+.navbar{
+    overflow: hidden;
+    background-color: rgba(127, 255, 212, 0.596);
+    position: sticky;
+    top: 0;
+
+    div{
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+
+        a{
+            display: block;
+            color: rgb(35, 3, 78);
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+
+            &.right{
+                margin-left: auto;
+            }
+
+            &:hover{
+                background-color: beige;
+                color: blue;
+            }
+            &.active{
+                background-color: beige;
+                color: blue;
+            }
+        }
+    }
+
+}
+
+.content{
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgba(137, 43, 226, 0.11);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    @media (max-width : 768px) {
+        flex-direction: column-reverse;
+    }
+    /* .middle{
+        margin: auto;
+    } */
+    .side{
+        width: 360px;
+        flex: none;
+        border-left: 1px solid #9807f880;
+        border-right: 1px solid #9807f880;
+
+        @media (max-width : 768px){
+            width: 100%;
+            border-left: 0px;
+            border-right: 0px;
+        }
+    }
+    .main{
+        flex: 0 1 auto;
+        background-color: rgba(255, 1, 234, 0.075);
+        border-right: 1px solid #9807f880;
+    }
+    .container{
+        padding: 20px;
+    }
+    .fakeimg{
+        background-color: #4e04fc3a;
+        width: auto;
+        padding: 20px;
+    }
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+    background: rgba(152, 251, 152, 0.192);
+}

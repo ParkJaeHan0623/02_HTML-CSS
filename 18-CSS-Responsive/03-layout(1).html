@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+
+        .header {
+          background-color: rgba(175, 238, 238, 0.781);
+          padding: 15px;
+          text-align: center;
+        }
+        .footer {
+          background-color: rgba(175, 238, 238, 0.781);
+          text-align: center;
+          padding: 10px;
+          margin-top: 7px;
+        }
+        .body {
+          display: flex;
+          flex-wrap: wrap;
+
+          .menu {
+            width: 20%;
+            text-align: center;
+
+            @media only screen and (max-width: 620px) {
+              width: 100%;
+            }
+
+            a {
+              background-color: rgba(175, 238, 238, 0.781);
+              padding: 8px;
+              margin-top: 8px;
+              display: block;
+              width: 100%;
+              color: #000;
+              text-decoration: none;
+            }
+          }
+          .main {
+            width: 60%;
+            padding: 0 20px;
+
+            @media only screen and (max-width: 620px) {
+              width: 100%;
+            }
+          }
+          .right {
+            background-color: rgba(175, 238, 238, 0.781);
+            width: 20%;
+            padding: 15px;
+            margin-top: 7px;
+            text-align: center;
+
+            @media only screen and (max-width: 620px) {
+              width: 100%;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Hello World</h1>
+      </div>
+
+      <div class="body">
+        <div class="menu">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+          <a href="#">Link 4</a>
+        </div>
+
+        <div class="main">
+          <h2>Main</h2>
+          <p>Hello my name is ParkJaeHan</p>
+        </div>
+        <div class="right">About</div>
+        <p>I'm 28 years old. I'm from BUSAN</p>
+      </div>
+
+      <div class="footer">&copy; copyright</div>
+    </div>
+  </body>
+</html>
