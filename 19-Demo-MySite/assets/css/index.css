@@ -1,0 +1,175 @@
+/* -------------------------------------------------------------------------------------------------
+메인 페이지 스타일
+----------------------------------------------------------------------------------------------------*/
+.main {
+    /* 작업하는 동안의 임시 적용 스타일 */
+    /* background-color: #0000ff55; */
+
+    /* 상단영역의 높이보다 여유있게 여백을 줌(임시) */
+    /* padding-top: 100px; */
+
+    .title {
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+
+        .hello {
+            margin: auto;
+            color: var(--my-color-white);
+            text-align: center;
+            text-transform: uppercase;
+            padding: 30px 50px;
+
+            h1 {
+                font-size: 36px;
+                font-weight: 600;
+                white-space: nowrap;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 20px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .introduce {
+        /* 각 영역을 확인하기 위한 임시 코드 */
+        /* background-color: #ff000022;
+        height: 150px; */
+
+        .title {
+            height: 100vh;
+            background-image: url(../img/parallax1.jpg);
+
+            .hello {
+                background-color: var(--my-color-gray);
+            }
+        }
+    }
+
+    .portfolio {
+
+        /* 각 영역을 확인하기 위한 임시 코드 */
+        /* background-color: #0066ff44;
+         height: 150px; */
+        .title {
+            background-image: url(../img/parallax2.jpg);
+        }
+
+    }
+
+    .contact {
+
+        /* 각 영역을 확인하기 위한 임시 코드 */
+        /* background-color: #FF00FF44;
+        height: 150px; */
+        .title {
+            background-image: url(../img/parallax3.jpg);
+        }
+
+    }
+
+    .about-me {
+        max-width: 1100px;
+        margin: auto;
+        padding: 65px 40px;
+
+        h2{
+            font-size: 42px;
+            color: var(--my-color-dark-gray);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        h3{
+            font-size: 30px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            font-style: italic;
+            color: var(--my-color-gray);
+            text-align: center;
+        }
+        p{
+            line-height: 150%;
+            font-size: 18px;
+            margin-bottom: 45px;
+            font-weight: 300;
+        }
+        .about-box{
+            display: flex;
+            flex-wrap: wrap;
+
+            .photo-box{
+                width: 50%;
+                padding: 0 35px;
+
+                h4{
+                    font-size: 22px;
+                    color:var(--my-color-gray);
+                    margin-bottom: 20px;
+
+                    i{
+                        margin-right: 10px;
+                    }
+                }
+                img{
+                    width: 100%;
+                }
+            }
+            p{
+                width: 50%;
+                padding-top: 40px;
+            }
+        }
+    }
+    .skill{
+        max-width: 1100px;
+        margin: auto;
+        padding: 40px 40px 50px 40px;
+
+        h2{
+            font-size: 32px;
+            margin-bottom: 45px;
+            text-align: center;
+            color: var(--my-color-gray);
+        }
+        .skill-section{
+            h3{
+                font-size: 22px;
+                margin-bottom: 15px;
+                font-weight: 300;
+                letter-spacing: 8px;
+            }
+            .bar-container{
+                height: 35px;
+                background-color: var(--my-color-light-gray);
+                margin-bottom: 30px;
+
+                .bar{
+                    height: 100%;
+                    background-color: var(--my-color-gray);
+                    text-align: center;
+                    color: var(--my-color-white);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &.w90p{
+                        width: 90%;
+                    }
+                    &.w85p{
+                        width: 85%;
+                    }
+                    &.w75p{
+                        width: 75%;
+                    }
+                }
+            }
+        }
+    }
+}
