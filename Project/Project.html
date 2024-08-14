@@ -29,6 +29,7 @@
 
           /* height: 100vh; */
           .sidebar {
+            
             position: fixed;
             /* box-sizing: border-box;
             display: block; */
@@ -45,6 +46,7 @@
             }
 
             .menu {
+              
               /* top: 85px;   */
               box-sizing: border-box;
               /* width: 240px; */
@@ -64,6 +66,9 @@
                   color: black;
                 }
               }
+              .active{
+              color: black;
+            }
             }
             .contact {
               /* top: 385px;   */
@@ -91,16 +96,25 @@
           /* height: 100%; */
           .header {
             /* background-color: aqua; */
-            padding: 10px;
+            padding: 10px 0;
             display: flex;
+            justify-content: space-between;
             .title {
-              padding: 10px;
+              padding: 10px 0;
               font-size: 30px;
               font-style: italic;
             }
             .use {
-              margin-left: auto;
-              padding: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 10px 0;
+              transform: translateY(15%);
+              i{
+                font-size: 20px;
+                margin-left: 10px;
+              }
+
             }
           }
           .main {
@@ -166,6 +180,10 @@
                 font-style: italic;
               }
               .item-list {
+                .sale{
+                  color: red;
+                  filter: grayscale(70%);
+                }
                 /* height: 80vh; */
 
                 /* width: 100%; */
@@ -215,6 +233,7 @@
             .footer-top {
               background-color: black;
               padding: 15px;
+              padding-bottom: 50px;
               .subscribe {
                 font-size: 36px;
                 color: white;
@@ -249,36 +268,144 @@
               }
             }
             .address {
-              background-color: gray;
+              background-color: #f1f1f1;
               display: flex;
+              padding: 60px 0;
               
 
               .contact {
                 flex: 1;
-                input{
+                h2{
                   display: block;
+                  text-align: center;
+                  line-height: 100%;
+                  margin: 10px;
+                  font-size: 30px;
+                  font-weight: 100;
+                  
                 }
+                p{
+                  display: block;
+                  text-align: center;
+                  padding: 10px;
+                  font-size: 13px;
+                }
+                .input-wrap{
+                  display: block;
+                  text-align: center;
+                  line-height: 100%;
+                  padding: 10px;
+                  
+                  .send{
+                    display: block;
+                    background-color: black;
+                    color: white;
+                    text-align: center;
+                    line-height: 100%;
+                    padding: 10px;
+                    font-size: 12px;
+                    &:hover {
+                  background-color: gray;
+                  color: black;
+                }
+
+                  }
+                  
+                  input{
+                    border: 1px solid #CCC;
+                    padding: 5px;
+                    margin: 5px 0;
+                    width: 100%;
+                  }
+                 
+                }
+                
               }
               .about {
                 flex: 1;
-                a{
+                h2{
                   display: block;
+                  text-align: center;
+                  line-height: 100%;
+                  margin: 10px;
+                  font-size: 30px;
+                  font-weight: 100;
                 }
+                .a-wrap{
+                  display: block;
+                  text-align: center;
+                  line-height: 100%;
+                  padding: 10px;
+                  .link{
+                    color: black;
+                    &:hover{
+                    color: gray;
+                  }
+                  }
+                  a{
+                  font-size: 13px;
+                  display: block;
+                  padding: 5px;
+                  margin: 5px 0;
+                  width: 100%;
+                  
+                }
+                }
+                
               }
               .store{
                 flex: 1;
+                h2{
+                  display: block;
+                  text-align: left;
+                  line-height: 100%;
+                  margin: 10px 0;
+                  font-size: 30px;
+                  font-weight: 100;
+                }
+                .p-wrap{
+                  display: block;
+                  text-align: left;
+                  line-height: 100%;
+                  padding: 10px 0;
+                  p{
+                  font-size: 13px;
+                  display: block;
+                  padding: 5px;
+                  margin: 5px 0;
+                  width: 100%;
+                  i{
+                    padding-right: 5px;
+                  }
+                  }
+                }
+                .i-wrap{
+                  display: block;
+                  padding-top: 10px;
+                  padding-left: 5px;
+                  
+                }
+
               }
             }
             .footer-bottom{
+              padding: 20px;
               display: box;
               background-color: black;
               color: white;
               text-align: center;
               line-height: 30px;
+              .link{
+                color: white;
+                &:hover{
+                  color: gray;
+
+              }
             }
           }
         }
       }
+    }
     </style>
   </head>
   <body>
@@ -292,7 +419,7 @@
           <div class="menu">
             <a href="#" class="link">Shirts</a>
             <a href="#" class="link">Dresses</a>
-            <a href="#" class="link">Jeans</a>
+            <a href="#" class="link active">Jeans</a>
             <a href="#" class="link">Jackets</a>
             <a href="#" class="link">Gymwear</a>
             <a href="#" class="link">Blazers</a>
@@ -310,7 +437,10 @@
         <!-- header -->
         <header class="header">
           <div class="title">Jeans</div>
-          <div class="use"><i class="fa-solid fa-camera"></i></div>
+          <div class="use">
+            <i class="fas fa-cart-shopping"></i>
+            <i class="fab fa-sistrix"></i>
+          </div>
         </header>
         <!-- main -->
         <div class="main">
@@ -345,7 +475,7 @@
                 <div class="item-wrapper">
                   <img src="img/jeans2.jpg" />
                   <div class="img-content">
-                    <h3>Ripped Skinny Jeans</h3>
+                    <h3>Mega Ripped Jeans</h3>
                     <h2>$19.99</h2>
                   </div>
                 </div>
@@ -354,7 +484,7 @@
                 <div class="item-wrapper">
                   <img src="img/jeans3.jpg" />
                   <div class="img-content">
-                    <h3>Ripped Skinny Jeans</h3>
+                    <h3>Washed Skinny Jeans</h3>
                     <h2>$20.50</h2>
                   </div>
                 </div>
@@ -363,7 +493,7 @@
                 <div class="item-wrapper">
                   <img src="img/jeans4.jpg" />
                   <div class="img-content">
-                    <h3>Ripped Skinny Jeans</h3>
+                    <h3>Vintage Skinny Jeans</h3>
                     <h2>$14.99</h2>
                   </div>
                 </div>
@@ -381,7 +511,7 @@
                 <div class="item-wrapper">
                   <img src="img/jeans2.jpg" />
                   <div class="img-content">
-                    <h3>Ripped Skinny Jeans</h3>
+                    <h3>Mega Ripped Jeans</h3>
                     <h2>$19.99</h2>
                   </div>
                 </div>
@@ -390,8 +520,8 @@
                 <div class="item-wrapper">
                   <img src="img/jeans3.jpg" />
                   <div class="img-content">
-                    <h3>Ripped Skinny Jeans</h3>
-                    <h2>$20.50</h2>
+                    <h3>Washed Skinny Jeans</h3>
+                    <h2 class="sale">$20.50</h2>
                   </div>
                 </div>
               </li>
@@ -399,7 +529,7 @@
                 <div class="item-wrapper">
                   <img src="img/jeans4.jpg" />
                   <div class="img-content">
-                    <h3>Ripped Skinny Jeans</h3>
+                    <h3>Vintage Skinny Jeans</h3>
                     <h2>$14.99</h2>
                   </div>
                 </div>
@@ -421,13 +551,17 @@
             <div class="contact">
               <h2>contact</h2>
               <p>Questions? Go ahead.</p>
-              <input type="text" maxlength="100" placeholder="Enter e-mail" />
-              <input type="text" maxlength="100" placeholder="Enter e-mail" />
-              <input type="text" maxlength="100" placeholder="Enter e-mail" />
-              <input type="text" maxlength="100" placeholder="Enter e-mail" />
+              <div class="input-wrap">
+              <input type="text" maxlength="100" placeholder="Name" />
+              <input type="text" maxlength="100" placeholder="Email" />
+              <input type="text" maxlength="100" placeholder="Subject" />
+              <input type="text" maxlength="100" placeholder="Message" />
+              <div class="send">Send</div>
+            </div>
             </div>
             <div class="about">
               <h2>About</h2>
+              <div class="a-wrap">
               <a href="#" class="link">About us</a>
               <a href="#" class="link">We're hiring</a>
               <a href="#" class="link">Support</a>
@@ -437,18 +571,33 @@
               <a href="#" class="link">Return</a>
               <a href="#" class="link">Help</a>
             </div>
+            </div>
 
             <div class="store">
               <h2>Store</h2>
-              <p>Company Name</p>
-              <p>0044123123</p>
-              <p>ex@mail.com</p>
+              <div class="p-wrap">
+              <p><i class="fas fa-location-dot"></i>Company Name</p>
+              <p><i class="fas fa-phone"></i>0044123123</p>
+              <p><i class="fas fa-envelope"></i>ex@mail.com</p>
+            </div>
+              
               <h2>We accept</h2>
-              <p>Amex</p>
-              <p>Credit Card</p>
+              <div class="p-wrap">
+              <p><i class="fab fa-cc-amex"></i>Amex</p>
+              <p><i class="fas fa-credit-card"></i>Credit Card</p>
+              <div class="i-wrap">
+              <i class="fab fa-facebook-square"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-snapchat-square"></i>
+              <i class="fab fa-pinterest-p"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            </div>
             </div>
           </div>
-          <div class="footer-bottom">Powered by w3.css</div>
+          <div class="footer-bottom">Powered by <a href="#" class="link">w3.css</a></div>
+          
         </footer>
       </div>
     </div>
