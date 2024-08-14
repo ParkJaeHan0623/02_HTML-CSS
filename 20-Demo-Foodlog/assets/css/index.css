@@ -1,0 +1,87 @@
+/* 음식 갤러리 영역 */
+
+.food-gallery{
+    display: flex;
+    flex-wrap: wrap;
+
+    .food-item{
+        flex: 0 1 25%;
+        padding: 20px 10px;
+
+        a{
+            display: block;
+
+            /* 이미지를 감싸는 박스 */
+            .img-wrapper{
+                width: 100%;
+                overflow: hidden;
+
+                .img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all 0.3s ease-in-out;
+                }
+                
+            }
+            &:hover{
+                .img-wrapper img{
+                    transform: scale(1.1, 1.1);
+                }
+            }
+            .food-content{
+                padding: 15px 10px;
+                text-align: center;
+
+                h2{
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    line-height: 130%;
+
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 120%;
+                }
+            }
+
+        }
+    }
+}
+
+/* 페이지 번호 영역 */
+
+.pagenation{
+    display: flex;
+    justify-content: center;
+
+    li{
+        width: 32px;
+        height: 32px;
+
+        &.active{
+            background-color: black;
+
+            a{color: #fff;}
+        }
+
+        a{
+            width: 100%;
+            height: 100%;
+            font-size: 16px;
+
+            /* 중앙배치 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+/* 쉐프 소개 영역 */
+

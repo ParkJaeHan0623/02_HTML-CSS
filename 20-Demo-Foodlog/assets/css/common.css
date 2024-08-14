@@ -1,0 +1,140 @@
+*{
+    font-family: "Noto Sans KR";
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* header, main , footer 영역 안에서 내용의 넓이를 제한하는 박스 */
+.content-container{
+    max-width: 1200px;
+    margin: auto;
+
+    /* 작업하는 동안의 임시적용 */
+    /* background-color: #0002;
+    font-size: 24px;
+    padding: 25px; */
+}
+
+/* 상단 영역 */
+.header{
+    /* 그림자 */
+    box-shadow: 0 1px 3px #0003; 
+
+    /* 작업하는 동안의 임시적용 */
+    /* background-color: #f063; */
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9000;
+
+    /* 다른 영역 위에 떠있으므로 아래쪽에 스크롤 되는 내용을 가리기 위해 배경색상 흰색 처리 */
+    background-color: white;
+
+    .content-container{
+        display: flex;
+        justify-content: space-between;
+
+        .icon-button{
+            font-size: 24px;
+            font-weight: 900;
+            padding: 16px;
+            
+            &:hover{
+                background-color: #dddddd;
+                color: #ffffff;
+            }
+            
+        }
+        /* 사이트 제목(로고) */
+        .logo{
+            font-size: 30px;
+            font-weight: 600;
+            display: flex;
+            align-items: center; /* 세로축 가운데정렬 */
+            
+        }
+        /* .icon-button:hover{
+            background-color: #dddddd;
+            color: #ffffff;
+        } */
+    }
+}
+
+/* 내용 영역 */
+.main{
+    /* 작업하는 동안의 임시적용 */
+    background-color: #f603;
+
+    /* 상단바에 가려지는 만큼 여백 확보 */
+    padding-top: 57px;
+}
+
+/* 하단 영역 */
+.footer{
+    /* 상단 테두리로 구분선의 역할을 하도록 함 */
+    border-top: 1px solid #dddddd;
+
+    /* 작업하는 동안의 임시적용 */
+    /* background-color: #06f3; */
+
+    .content-container{
+        display: flex;
+
+        .footer-item{
+            /* 각 영역이 공간을 동일한 비율로 나누어 갖도록 설정 */
+            flex: 1;
+            padding: 15px;
+
+            h3{
+                font-size: 24px;
+                font-weight: 700px;
+                margin: 22px 0;
+                /* 영어 대문자 변환 */
+                /* text-transform: uppercase;  */
+            }
+            &:nth-child(1) p{
+                font-size: 15px;
+                line-height: 150%;
+                font-weight: 300;
+            }
+            &:nth-child(2) a{
+                display: flex;
+                margin: 20px 0;
+                padding: 0 10px;
+
+                img{
+                    width: 65px;
+                    height: 65px;
+                }
+                .blog-post-title{
+                    font: size 15px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+                .blog-post-content{
+                    line-height: 1.2;
+                    
+                }
+            }
+            &:nth-child(3) .tags li{
+                display: inline-block;
+                background-color: #616161;
+                color: #ffffff;
+                font-size: 13px;
+                padding: 5px 10px;
+                margin-bottom: 8px;
+
+                &.black{
+                    background-color: black;
+                }
+            }
+        }
+    }
+}
+

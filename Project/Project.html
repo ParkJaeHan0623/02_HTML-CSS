@@ -1,47 +1,456 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ko">
+  <head>
+    <meta translate="no" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
-    
-</head>
-<body>
-    <!-- Header 영역 -->
-    <header class="header">
-        <div class="logo">
-            <h3>LOGO</h3>
-        </div>
-        <div class="head-container">
-            <!-- <ul>
-                <li><p>Jeans</p></li>
-                <li>
-                    <p><a href="#"><i class="fa fa-home"></i></a></p>
-                    <p><a href="#"><i class="fa fa-home"></i></a></p>
-                </li>
-            </ul> -->
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
 
-            
-            <div class="menu-title"><p>Jeans</p></div>
-               
-            <div class="shopping"><p><a href="#"><i class="fa fa-home"></i></a></p>
-                <p><a href="#"><i class="fa fa-home"></i></a></p>
+      .container {
+        width: 1000px;
+        margin: auto;
+        /* border: 5px dotted red; */
+        display: flex;
+
+        .sidebar-container {
+          /* background-color: purple; */
+          flex: 0 0 240px;
+
+          /* height: 100vh; */
+          .sidebar {
+            position: fixed;
+            /* box-sizing: border-box;
+            display: block; */
+
+            .logo {
+              font-size: 30px;
+              box-sizing: border-box;
+              width: 240px;
+              padding: 30px 20px;
+              /* margin: auto; */
+              background-color: white;
+              /* height: 10vh; */
+              text-align: left;
+            }
+
+            .menu {
+              /* top: 85px;   */
+              box-sizing: border-box;
+              /* width: 240px; */
+              /* height: 100vh; */
+              /* padding: 100px; */
+              background-color: white;
+
+              /* top: 0; */
+              .link {
+                display: block;
+                padding: 10px 16px;
+                text-decoration: none;
+                font-weight: bold;
+                color: gray;
+                &:hover {
+                  background-color: #f1f1f1;
+                  color: black;
+                }
+              }
+            }
+            .contact {
+              /* top: 385px;   */
+              margin-top: 50px;
+              box-sizing: border-box;
+              background-color: white;
+              .link {
+                display: block;
+                padding: 10px 16px;
+                text-decoration: none;
+
+                color: black;
+                &:hover {
+                  background-color: #f1f1f1;
+                }
+              }
+            }
+          }
+        }
+
+        .main-container {
+          /* background-color: yellow; */
+          flex: 1;
+          height: 3500px;
+          /* height: 100%; */
+          .header {
+            /* background-color: aqua; */
+            padding: 10px;
+            display: flex;
+            .title {
+              padding: 10px;
+              font-size: 30px;
+              font-style: italic;
+            }
+            .use {
+              margin-left: auto;
+              padding: 10px;
+            }
+          }
+          .main {
+            display: block;
+            width: 100%;
+
+            .main-img {
+              background-image: url(img/jeans.jpg);
+              width: 840px;
+              height: 560px;
+              background-size: 100%;
+              background-repeat: no-repeat;
+
+              /* background-position: center center; */
+              .display {
+                /* display: flex; */
+                .top-left {
+                  /* padding: 30px 30px; */
+                  h1 {
+                    padding: 15px;
+                    color: white;
+                    letter-spacing: 3px;
+                    font-size: 50px;
+                  }
+                  h3 {
+                    color: white;
+                    font-size: 20px;
+                    padding: 15px;
+                  }
+                  .button {
+                    display: block;
+                    width: 155px;
+                    height: 51px;
+                    background-color: black;
+                    text-align: center;
+                    margin-left: 15px;
+
+                    .link {
+                      display: block;
+                      width: 155px;
+                      height: 51px;
+                      padding: 12px 24px;
+                      text-decoration: none;
+                      color: white;
+                      &:hover {
+                        background-color: #f1f1f1;
+                        color: black;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .main-item {
+              .number {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                display: flex;
+                /* justify-content: center; */
+                align-items: center;
+                /* padding: 15px 5px; */
+                /* margin-top: 10px; */
+                font-style: italic;
+              }
+              .item-list {
+                /* height: 80vh; */
+
+                /* width: 100%; */
+                /* width: 1000px; */
+                /* display: block; */
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                .item {
+                  padding: 10px;
+                  flex: 0 1 25%;
+                  .item-wrapper {
+                    /* 흑백처리 */
+                    filter: grayscale(70%);
+                    &:hover {
+                      filter: none;
+                    }
+                    width: 100%;
+                    img {
+                      width: 100%;
+                      height: 100%;
+                    }
+                    .img-content {
+                      h3 {
+                        font-size: 16px;
+                        font-weight: 300;
+                      }
+                      h2 {
+                        font-size: 16px;
+                      }
+                    }
+                  }
+                  /* .item-img{
+                        width: 160px;
+                        height: 250px;
+                        background-image: url(img/jeans1.jpg);
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        background-position: center;
+                    } */
+                }
+              }
+            }
+          }
+
+          .footer {
+            .footer-top {
+              background-color: black;
+              padding: 15px;
+              .subscribe {
+                font-size: 36px;
+                color: white;
+                padding: 30px 0 30px 0;
+              }
+              .comment {
+                color: white;
+                padding: 12px 0 12px 0;
+              }
+              .email {
+                input {
+                  width: 100%;
+                  height: 30px;
+                  padding: 19px 10px 19px 10px;
+                }
+              }
+              .subscribe-button {
+                display: block;
+                width: 105px;
+                height: 35px;
+                background-color: #f44336;
+                text-align: center;
+                line-height: 26px;
+                margin-top: 10px;
+                padding: 4px;
+                color: white;
+
+                &:hover {
+                  background-color: #f1f1f1;
+                  color: black;
+                }
+              }
+            }
+            .address {
+              background-color: gray;
+              display: flex;
+              
+
+              .contact {
+                flex: 1;
+                input{
+                  display: block;
+                }
+              }
+              .about {
+                flex: 1;
+                a{
+                  display: block;
+                }
+              }
+              .store{
+                flex: 1;
+              }
+            }
+            .footer-bottom{
+              display: box;
+              background-color: black;
+              color: white;
+              text-align: center;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 전체 컨테이너 -->
+    <div class="container">
+      <!-- 사이드바 컨테이너 -->
+      <div class="sidebar-container">
+        <!-- 사이드바 -->
+        <div class="sidebar">
+          <div class="logo"><h3>LOGO</h3></div>
+          <div class="menu">
+            <a href="#" class="link">Shirts</a>
+            <a href="#" class="link">Dresses</a>
+            <a href="#" class="link">Jeans</a>
+            <a href="#" class="link">Jackets</a>
+            <a href="#" class="link">Gymwear</a>
+            <a href="#" class="link">Blazers</a>
+            <a href="#" class="link">Shoes</a>
+          </div>
+          <div class="contact">
+            <a href="#" class="link">Contact</a>
+            <a href="#" class="link">Newsletter</a>
+            <a href="#" class="link">Subscribe</a>
+          </div>
+        </div>
+      </div>
+      <!-- 메인 컨테이너 -->
+      <div class="main-container">
+        <!-- header -->
+        <header class="header">
+          <div class="title">Jeans</div>
+          <div class="use"><i class="fa-solid fa-camera"></i></div>
+        </header>
+        <!-- main -->
+        <div class="main">
+          <div class="main-img">
+            <div class="display">
+              <div class="top-left">
+                <h1>New arrivals</h1>
+                <h3>COLLECTION 2016</h3>
+                <div class="button">
+                  <a href="#" class="link">SHOP NOW</a>
+                </div>
+              </div>
             </div>
-                
-            
+          </div>
+          <div class="main-item">
+            <div class="number">8 items</div>
+            <ul class="item-list">
+              <!-- <li class="item">
+                <div class="item-img">
+                </div>
+              </li> -->
+              <li class="item">
+                <div class="item-wrapper">
+                  <img src="img/jeans1.jpg" />
+                  <div class="img-content">
+                    <h3>Ripped Skinny Jeans</h3>
+                    <h2>$24.99</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-wrapper">
+                  <img src="img/jeans2.jpg" />
+                  <div class="img-content">
+                    <h3>Ripped Skinny Jeans</h3>
+                    <h2>$19.99</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-wrapper">
+                  <img src="img/jeans3.jpg" />
+                  <div class="img-content">
+                    <h3>Ripped Skinny Jeans</h3>
+                    <h2>$20.50</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-wrapper">
+                  <img src="img/jeans4.jpg" />
+                  <div class="img-content">
+                    <h3>Ripped Skinny Jeans</h3>
+                    <h2>$14.99</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-wrapper">
+                  <img src="img/jeans1.jpg" />
+                  <div class="img-content">
+                    <h3>Ripped Skinny Jeans</h3>
+                    <h2>$24.99</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-wrapper">
+                  <img src="img/jeans2.jpg" />
+                  <div class="img-content">
+                    <h3>Ripped Skinny Jeans</h3>
+                    <h2>$19.99</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-wrapper">
+                  <img src="img/jeans3.jpg" />
+                  <div class="img-content">
+                    <h3>Ripped Skinny Jeans</h3>
+                    <h2>$20.50</h2>
+                  </div>
+                </div>
+              </li>
+              <li class="item">
+                <div class="item-wrapper">
+                  <img src="img/jeans4.jpg" />
+                  <div class="img-content">
+                    <h3>Ripped Skinny Jeans</h3>
+                    <h2>$14.99</h2>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-    </header>
-    <!-- Nav 영역 -->
+        <!-- footer -->
+        <footer class="footer">
+          <div class="footer-top">
+            <div class="subscribe">Subscribe</div>
+            <div class="comment">To get special offers and VIP treatment:</div>
+            <div class="email">
+              <input type="text" maxlength="100" placeholder="Enter e-mail" />
+            </div>
+            <div class="subscribe-button">Subscribe</div>
+          </div>
+          <div class="address">
+            <div class="contact">
+              <h2>contact</h2>
+              <p>Questions? Go ahead.</p>
+              <input type="text" maxlength="100" placeholder="Enter e-mail" />
+              <input type="text" maxlength="100" placeholder="Enter e-mail" />
+              <input type="text" maxlength="100" placeholder="Enter e-mail" />
+              <input type="text" maxlength="100" placeholder="Enter e-mail" />
+            </div>
+            <div class="about">
+              <h2>About</h2>
+              <a href="#" class="link">About us</a>
+              <a href="#" class="link">We're hiring</a>
+              <a href="#" class="link">Support</a>
+              <a href="#" class="link">Shipment</a>
+              <a href="#" class="link">Payment</a>
+              <a href="#" class="link">Gift card</a>
+              <a href="#" class="link">Return</a>
+              <a href="#" class="link">Help</a>
+            </div>
 
-    <!-- Main 영역 -->
-
-    <!--Footer 영역  -->
-     
-</body>
+            <div class="store">
+              <h2>Store</h2>
+              <p>Company Name</p>
+              <p>0044123123</p>
+              <p>ex@mail.com</p>
+              <h2>We accept</h2>
+              <p>Amex</p>
+              <p>Credit Card</p>
+            </div>
+          </div>
+          <div class="footer-bottom">Powered by w3.css</div>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
