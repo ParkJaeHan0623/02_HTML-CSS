@@ -16,45 +16,36 @@
         padding: 0;
         margin: 0;
       }
-
+      /* 전체 컨테이너 */
       .container {
         width: 1000px;
         margin: auto;
-        /* border: 5px dotted red; */
         display: flex;
-
+        
+        /* 사이드바 컨테이너 */
         .sidebar-container {
-          /* background-color: purple; */
           flex: 0 0 240px;
-
-          /* height: 100vh; */
+          
+          /* 사이드바 */
           .sidebar {
             
             position: fixed;
-            /* box-sizing: border-box;
-            display: block; */
-
+            
+            /* 사이드바 상단 로고 */
             .logo {
               font-size: 30px;
               box-sizing: border-box;
               width: 240px;
               padding: 30px 20px;
-              /* margin: auto; */
               background-color: white;
-              /* height: 10vh; */
               text-align: left;
             }
-
+            /* 사이드바 메뉴 */
             .menu {
-              
-              /* top: 85px;   */
               box-sizing: border-box;
-              /* width: 240px; */
-              /* height: 100vh; */
-              /* padding: 100px; */
               background-color: white;
 
-              /* top: 0; */
+              /* 사이드바  a 태그*/
               .link {
                 display: block;
                 padding: 10px 16px;
@@ -70,8 +61,9 @@
               color: black;
             }
             }
+            /* 사이드바 하단부 */
             .contact {
-              /* top: 385px;   */
+              
               margin-top: 50px;
               box-sizing: border-box;
               background-color: white;
@@ -88,17 +80,17 @@
             }
           }
         }
-
+        /* 메인 컨테이너 */
         .main-container {
-          /* background-color: yellow; */
+          
           flex: 1;
-          height: 3500px;
-          /* height: 100%; */
+          height: 100%;
+
           .header {
-            /* background-color: aqua; */
             padding: 10px 0;
             display: flex;
             justify-content: space-between;
+
             .title {
               padding: 10px 0;
               font-size: 30px;
@@ -110,6 +102,7 @@
               align-items: center;
               padding: 10px 0;
               transform: translateY(15%);
+
               i{
                 font-size: 20px;
                 margin-left: 10px;
@@ -117,10 +110,12 @@
 
             }
           }
+          /* main */
           .main {
             display: block;
             width: 100%;
-
+           
+            /* 메인 이미지 */
             .main-img {
               background-image: url(img/jeans.jpg);
               width: 840px;
@@ -128,11 +123,10 @@
               background-size: 100%;
               background-repeat: no-repeat;
 
-              /* background-position: center center; */
+              /* 메인 이미지 상단 로고 */
               .display {
-                /* display: flex; */
                 .top-left {
-                  /* padding: 30px 30px; */
+                  
                   h1 {
                     padding: 15px;
                     color: white;
@@ -168,15 +162,14 @@
                 }
               }
             }
+            /* 중앙 부분 사진 */
             .main-item {
               .number {
                 padding-top: 10px;
                 padding-bottom: 10px;
                 display: flex;
-                /* justify-content: center; */
                 align-items: center;
-                /* padding: 15px 5px; */
-                /* margin-top: 10px; */
+                
                 font-style: italic;
               }
               .item-list {
@@ -184,17 +177,14 @@
                   color: red;
                   filter: grayscale(70%);
                 }
-                /* height: 80vh; */
-
-                /* width: 100%; */
-                /* width: 1000px; */
-                /* display: block; */
+                
                 list-style: none;
                 display: flex;
                 flex-wrap: wrap;
                 .item {
                   padding: 10px;
                   flex: 0 1 25%;
+                  
                   .item-wrapper {
                     /* 흑백처리 */
                     filter: grayscale(70%);
@@ -207,6 +197,7 @@
                       height: 100%;
                     }
                     .img-content {
+                      padding-top: 10px;
                       h3 {
                         font-size: 16px;
                         font-weight: 300;
@@ -216,20 +207,15 @@
                       }
                     }
                   }
-                  /* .item-img{
-                        width: 160px;
-                        height: 250px;
-                        background-image: url(img/jeans1.jpg);
-                        background-repeat: no-repeat;
-                        background-size: 100%;
-                        background-position: center;
-                    } */
+                  
                 }
               }
             }
           }
-
+          /* footer */
           .footer {
+            /* footer 상단부분 */
+            padding-top: 10px;
             .footer-top {
               background-color: black;
               padding: 15px;
@@ -419,7 +405,7 @@
           <div class="menu">
             <a href="#" class="link">Shirts</a>
             <a href="#" class="link">Dresses</a>
-            <a href="#" class="link active">Jeans</a>
+            <a href="#" class="link active">Jeans <i class="fas fa-caret-down"></i></a>
             <a href="#" class="link">Jackets</a>
             <a href="#" class="link">Gymwear</a>
             <a href="#" class="link">Blazers</a>
@@ -458,10 +444,7 @@
           <div class="main-item">
             <div class="number">8 items</div>
             <ul class="item-list">
-              <!-- <li class="item">
-                <div class="item-img">
-                </div>
-              </li> -->
+              
               <li class="item">
                 <div class="item-wrapper">
                   <img src="img/jeans1.jpg" />
@@ -537,6 +520,7 @@
             </ul>
           </div>
         </div>
+
         <!-- footer -->
         <footer class="footer">
           <div class="footer-top">
